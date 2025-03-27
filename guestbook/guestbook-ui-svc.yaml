@@ -2,11 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: guestbook-ui
-spec:
-  type: NodePort
+spec:  
   ports:
   - port: 80
-    targetPort: 80
-    nodePort: 30080  # 30000-32767 aralığında bir değer olmalı
+    targetPort: 80    
   selector:
     app: guestbook-ui
